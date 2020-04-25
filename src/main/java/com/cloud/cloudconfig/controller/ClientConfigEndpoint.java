@@ -12,22 +12,22 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class ClientConfigEndpoint {
 
-    @Value("${service.cache.expiryTime.seconds}")
-    private String expiryTime;
+    @Value("${employeeService.request.timeout.milliseconds}")
+    private String requestTimeout;
 
-    @Value("${service.connection.timeout.milliseconds}")
-    private String connectionTime;
+    @Value("${employeeService.connection.timeout.milliseconds}")
+    private String connectionTimeout;
 
-    @Value("${service.http.maxpoolsize}")
+    @Value("${employeeService.http.maxpoolsize}")
     private String maxpoolsize;
 
-    @Value("${service.read.timeout.milliseconds}")
+    @Value("${employeeService.socket.timeout.milliseconds}")
     private String readtimeout;
 
     @GetMapping("/")
     public String getExpiryTime() {
-        return new StringBuilder("Expiry time is:" + expiryTime)
-                .append("Connection time: " + connectionTime)
+        return new StringBuilder("Expiry time is:" + requestTimeout)
+                .append("Connection time: " + connectionTimeout)
                 .append("Maxpool size: " + maxpoolsize)
                 .append("Read timeout: " + readtimeout)
                 .toString();
