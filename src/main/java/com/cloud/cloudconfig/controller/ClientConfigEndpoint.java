@@ -12,16 +12,16 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class ClientConfigEndpoint {
 
-    @Value("${service.cache.expiryTime.seconds.test}")
+    @Value("${service.cache.expiryTime.seconds}")
     private String expiryTime;
 
-    @Value("${service.connection.timeout.milliseconds.test}")
+    @Value("${service.connection.timeout.milliseconds}")
     private String connectionTime;
 
-    @Value("${service.http.maxpoolsize.test}")
+    @Value("${service.http.maxpoolsize}")
     private String maxpoolsize;
 
-    @Value("${service.read.timeout.milliseconds.test}")
+    @Value("${service.read.timeout.milliseconds}")
     private String readtimeout;
 
     @GetMapping("/")
