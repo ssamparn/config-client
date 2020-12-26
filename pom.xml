@@ -12,7 +12,7 @@
 	<artifactId>config-client</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>config-client</name>
-	<description>Spring Cloud Config Server</description>
+	<description>Client side usage of Spring Cloud Config Server</description>
 
 	<properties>
 		<java.version>1.8</java.version>
@@ -36,7 +36,6 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-configuration-processor</artifactId>
 		</dependency>
-
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
